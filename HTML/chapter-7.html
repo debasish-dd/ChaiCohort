@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chapter -7</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <h1>Forms</h1>
 
-    
-</body>
+    <form action="">
+      <label for="Name">Name: </label>
+      <input type="text" />
+      <label  for="phone number">Phone Number: </label>
+      <input pattern="[0-9]{10}" type="tel" />
+      <small>Enter a 10-digit number without spaces or dashes</small>
+      <br />
+      <textarea placeholder="enter your note here" name="note" rows="5" id="nn"></textarea>
+      <br />
+      <button type="submit">Submit</button>
+      <br />
+
+    </form>
+
+   
+  </body>
 </html>
