@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form</h1><br>
+
+    <form action="/submit-form">
+        <label for="email">enter your email here</label>
+        
+        <input type="text" title="input for email only" pattern="email">
+        <br>
+        <label for="date">enter date here</label>
+        <input type="date" title="enter the date">
+        <br> <label for="colour">enter your favorite color here</label>
+        <input type="color" title="enter your favorite color">
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+<hr>
+    <canvas id="myC" height="400px" width="400px" style="border: 1px;">
+
+    </canvas>
+
+        <script>
+            let canvas = document.getElementById('myC');
+            let c = canvas.getContext("2d");
+            c.fillstyle = 'red';
+            c.fillRect(0,0,200,200);
+
+
+        </script>
+
+
+</body>
+</html>
