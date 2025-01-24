@@ -62,8 +62,30 @@
 
 - Payment Gateway: Integration with Stripe, Razorpay, or PayPal
 
+## Timeline
+### Phase 1: Planning (1 Month)
 
+- Finalize requirements.
+- Design wireframes and prototypes.
 
+### Phase 2: Development (3 Months)
+
+- Build frontend and backend.
+- Integrate APIs and payment gateway.
+- Test core features.
+
+### Phase 3: Testing and Launch (1 Month)
+
+- Conduct user testing and bug fixes.
+- Deploy website.
+- Launch marketing campaigns.
+
+## Success Metrics 
+
+- User Acquisition: Achieve 5,000 registered users within the first 6 months.
+- Engagement: Average session duration of 5 minutes or more.
+- Conversion Rate: 20% of visitors completing bookings.
+- Customer Satisfaction: Average rating of 4+ stars for listed PGs
 
 
 
