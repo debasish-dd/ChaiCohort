@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    border: border-box;
+
+}
+.navbar{
+    height: 60px;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-items: auto;
+}
+.bav-logo{
+    height: 50px;
+    width: 100px;
+}
+.logo{
+    background-image: url(".//Amazon\ Clone\ \(Resources\)/amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+}
+.border{
+    border: 2px solid transparent;
+}
+.border:hover{
+    border: 2px solid white;
+}
