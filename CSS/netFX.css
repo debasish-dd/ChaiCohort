@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main{
+    background-image: url("./Nassits/image/bg.jpg");
+    height: 80vh;
+    position: relative;
+}
+.main .box{
+    height: 80vh;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    opacity: 0.44;
+    background-color: black;
+}
