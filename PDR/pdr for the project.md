@@ -1,4 +1,4 @@
- # Making PDR for a PG finding Website for college students
+ # Making PRD for a PG finding Website for college students
 
  ## Objective/Purpose
 
