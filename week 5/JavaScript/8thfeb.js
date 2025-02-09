@@ -7,4 +7,8 @@ if(ind>-1){
     arr.splice(ind , 1);
 }
 console.log(arr);
-//filter the array
+//filter the array with only include cafinated tea 
+    const uncafTea = "harbal tea";
+    arr.filter((i)=(arr[i]!="harbal tea"));
+    console.log(arr);
+    
