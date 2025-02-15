@@ -33,3 +33,5 @@ if (!Array.prototype.myMap) {
 
 const val = arr.map((e)=>e*2);
 console.log(val);
+
+
