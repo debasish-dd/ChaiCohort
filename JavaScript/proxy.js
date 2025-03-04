@@ -1,4 +1,4 @@
-const arr = [1,2,3,4,5,6,7,8,9];
+let arr = [1,2,3,4,5,6,7,8,9];
 
     // console.log(arr[-1]);
     
@@ -27,3 +27,28 @@ const proxyUser = new Proxy(user , {
 
 
 
+function negativeIndex(arr){
+    return new Proxy(arr , {
+        get(target , prop){
+            
+            const index = Number(prop);
+            if (index<0) {
+                return target[target.length + index]
+                
+            }
+            return target[length]
+        },
+        set(target, prop, val){
+            const index = Number(prop)
+            if (index<0) {
+             target[target.length + index]  = val;
+            }else target[index] = val
+
+            return true;
+        }
+    })
+}
+
+arr = [1,2,3,4,5,6,7,8,9];
+const newArr = negativeIndex(arr)
+console.log(newArr[-2]);
