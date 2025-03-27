@@ -4,7 +4,7 @@ import { login, registerUser, verifyUser } from "../controller/user.controller.j
 const router = express.Router()
 
 router.get("/register", registerUser)
-router.get("/verify/:token", verifyUser)
-router.get("/login", login)
+// router.get("/verify/:token", verifyUser)
+// router.get("/login", login)
 
 export default router;

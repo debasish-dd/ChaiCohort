@@ -106,45 +106,40 @@ const login = async (req, res) => {
       })
     }
 
-   const isMatched = await bcrypt.compare(password, user.password)
-   if (!isMatched) {
-    return res.status(400).json({
-      message: 'Invalid Email or Password'
-    })
-   }
-   const toke  = jwt.sign({
-    id:user._id,
-    role: user.role,
-},
-    "shhhhh",
-  {
-    expiresIn : '24h'
-  }
-)
-
-  const cookieOptions = {
-    httpOnly: true,
-    secure: true,
-    maxAge: 24*60*600*1000
-  }
-  res.cookie("test", token , cookieOptions)
-  res.status(400).json({
-    message: 'Login Successful',
-    success: true,
-    token,
-    user:{
-      id: user._id,
-      name: user.name,
-      role: user.role
+    const isMatched = await bcrypt.compare(password, user.password)
+    if (!isMatched) {
+      return res.status(400).json({
+        message: 'Invalid Email or Password'
+      })
     }
-  })
+    const toke = jwt.sign(
+      {
+        id: user._id,
+        role: user.role
+      },
+      'shhhhh',
+      {
+        expiresIn: '24h'
+      }
+    )
 
-
-
-
-  } catch (error) {
-
-  }
+    const cookieOptions = {
+      httpOnly: true,
+      secure: true,
+      maxAge: 24 * 60 * 600 * 1000
+    }
+    res.cookie('test', token, cookieOptions)
+    res.status(400).json({
+      message: 'Login Successful',
+      success: true,
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        role: user.role
+      }
+    })
+  } catch (error) {}
 }
 
 export { registerUser, verifyUser, login }
