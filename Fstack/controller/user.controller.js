@@ -161,4 +161,12 @@ const login = async (req, res) => {
   }
 }
 
-export { registerUser, verifyUser, login }
+const getMe = async (req,res) => {
+  try {
+    console.log("reached at profile level");
+    
+  } catch (error) {
+    
+  }
+}
+export { registerUser, verifyUser, login, getMe }
