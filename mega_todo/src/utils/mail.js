@@ -10,7 +10,7 @@ const sendMail = async (option) => {
     },
   });
   var emailText = mailGenrator.generatePlaintext(option.mailGenContent);
-  var emailText = mailGenrator.generate(option.mailGenContent);
+  var emailHTML = mailGenrator.generate(option.mailGenContent);
 
   const transporter = nodemailer.createTransport({
     host: process.env.MAILTRAP_SMTP_HOST,
@@ -22,8 +22,24 @@ const sendMail = async (option) => {
     },
   });
   
+  const mail = {
+    from: "mail.taskManager@example.com", // sender address
+      to: option.email, // list of receivers
+      subject: option.subject, // Subject line
+      text: emailText, // plain text body
+      html: emailHTML, // html body
+  }
+
+  try {
+    transporter.sendMail(mail)
+  } catch (error) {
+    console.error("email sending failed", error);
+    
+  }
 
 };
+
+
 
 const emailVerificationMailGenContent = (username, verificationURL) => {
   return {
