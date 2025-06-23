@@ -3,6 +3,6 @@ import { defineConfig, loadEnv } from 'vite'
 
 
 export default defineConfig({
-    plugins: [react],
+    plugins: [react()],
     
 })
