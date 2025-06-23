@@ -2,7 +2,9 @@ import React from 'https://esm.sh/react@19.1.0'
 import ReactDOM from 'https://esm.sh/react-dom@19.1.0/client'
 
 const Chai = props => {
-  return React.createElement('h1', {}, [
+  console.log(props)
+
+  return React.createElement('p', {}, [
     React.createElement('div', {}, [
       React.createElement('p', {}, props.name),
       React.createElement('p', {}, props.price)
@@ -11,16 +13,13 @@ const Chai = props => {
 }
 
 const App = () => {
-  return React.createElement(
-    'div',
-    {},
-    [React.createElement('h1', { class: 'test' }, [
-      'chai list',
-    ]),
-    React.createElement(Chai, { name:'masala chai, price:500' }),
-    React.createElement(Chai, { name:'ginger chai', price:400 }),
-    React.createElement(Chai, { name: 'olong chai', price:700 })]
-  )
+  return React.createElement('div', {}, [
+    React.createElement('h1', { class: 'test' }, ['chai list--']),
+    React.createElement(Chai, { name: 'masala chai', price: 500 }),
+    React.createElement(Chai, { name: 'ginger chai', price: 400 }),
+    React.createElement(Chai, { name: 'green tea', price: 800 }),
+    React.createElement(Chai, { name: 'olong tea', price: 700 })
+  ])
 }
 
 const anotherApp = () => {
